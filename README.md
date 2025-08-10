@@ -46,6 +46,7 @@ The figure below, is the first five rows of the final dataset to be used for fin
 
 ### Training (Fine-tuning)
 To fine-tune GPT-3.5 to take a user’s input of a product name to generate a pros and cons list for that product, the prepared dataset needed to be further formatted for fine-tuning. In particular, each row or instance had to be formatted to tell the LLM what it is meant to do, what the user will input is, and what the LLM should be generating in response. For this project, the LLM was told it will summarize the product’s reviews into a pros and cons list. The user will provide the product’s name and the compiled reviews. The LLM will then generate a pros and cons list.
+
 Once the file for fine-tuning is properly formatted, the sample of 500 products was used to fine-tune GPT-3.5. Of the 500 products, 350 were designated as training and the other 150 was designated as validation. A fairly small sample size was used due to monetary limitations. The specific GPT-3.5 model fine-tuned was GPT-3.5 Turbo 1106, with batch size of 10, learning rate of 0.0001, and 10 epochs. Hyperparameter training was not used for this project to minimize the amount of money spent.
 
 
@@ -76,6 +77,7 @@ The fine-tuned GPT-3.5 did well when the user input matches the training input, 
 
 ### Future Work
 Rethinking the structure of the fine-tuning dataset could lead to better results when considering how we want users to interact with the LLM. In particular, a potential fix is to have duplicate rows where one has all the information (product, reviews, label) and a duplicate where it only has product and label. This would help the model learn it cannot just rely on the user’s input to generate its response and hopefully help train it to recall information better when prompted. This change would require editing of the process used to produce the formatted file for fine-tuning since the system’s role and user input would change. 
+
 Once the model gets better at generating results based on user giving only a product name, it could then be expanded upon by scraping more reviews from other sources to give the model more context to pull from. This repository does include a notebook that shows how one watch forum was scraped for reviews; however, scraping data often involves significant preprocessing before use, so it was not further explored for this project due to time constraints. Ideally if more time could be dedicated, multiple sources could be scraped to get reviews from watch enthusiasts and then preprocess the scraped data to be able to use for fine-tuning. A major issue that would need to be address is how to pull out a product’s name from a review. This issue further extends when one also considers that some watches will have a formal official name along with a nickname like how one variant of the Rolex GMT-Master is called the Pepsi GMT or how the Seiko SBGA211 is called the Snowflake.
 
 ## How to reproduce results
