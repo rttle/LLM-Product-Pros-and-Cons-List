@@ -64,7 +64,7 @@ When following the formatting of the training, the model did well with a mean si
 
 When the model was asked to recall reviews from the training about the products to generate the pros and cons list, it did worse with a mean similarity score of 3.03. This was a poor choice, given that these products were from the validation set, so the model did not actually have reviews to recall. To correct this mistake, the same test was run again on a subset of the training set; however, the mean similarity score was also poor at 2.90.
 
-Below are histograms of the similarity scores when testing was done using the validation dataset.
+Below are histograms of the similarity scores when testing was done using the validation dataset. Please note that standard deviation should have been calculated to show how well the fine-tuned model was performing by using the 68-95-99.7 Rule.
 <img width="1240" height="470" alt="image" src="https://github.com/user-attachments/assets/bc67ff6e-23b8-4c8d-b290-03f15b0a2b96" />
 
 
