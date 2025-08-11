@@ -99,5 +99,5 @@ Data is from McAuley Lab at the University of California San Diego. https://amaz
   journal={arXiv preprint arXiv:2403.03952},
   year={2024}
 }
-WatchUSeek, *WatchUSeek Reviews Forum*, WATCHUSEEK.COM, https://www.watchuseek.com/forums/reviews.67/ 
+- WatchUSeek, *WatchUSeek Reviews Forum*, WATCHUSEEK.COM, https://www.watchuseek.com/forums/reviews.67/ 
 
